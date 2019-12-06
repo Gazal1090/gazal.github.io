@@ -115,7 +115,7 @@ node* get_node(int value){
 		return balancing (root,balance,key);
 	}
 
-	node* predecessor(node* node)
+	node* min_element(node* node)
 	{	
 		struct node* min=node;
 		while(node!=NULL)
@@ -158,7 +158,7 @@ node* get_node(int value){
 
 			else
 			{
-				struct node *min=predecessor(root);
+				struct node *min=min_element(root);
 				root->key=min->key;
 				min=min->right;
 				min->right = NULL;
